@@ -82,12 +82,12 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
     } 
     if((tree ->lower_than(tree -> current-> pair ->key, key))<1){
       //iqz
-      aux  = aux ->left;
+      aux = aux -> right;
       
     }else{
       //der
+      aux  = aux ->left;
       
-      aux = aux -> right;
     }
   }
     
