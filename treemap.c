@@ -79,12 +79,12 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
     if(is_equal(tree, aux ->pair->key, key)== 1) return aux -> pair;
     if((tree ->lower_than(tree -> current-> pair ->key, key))==0){
       //iqz
-      
-      aux = aux -> right;
-    }else{
-      //der
       aux  = aux ->left;
       
+    }else{
+      //der
+      
+      aux = aux -> right;
     }
   }
   
