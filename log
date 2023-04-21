@@ -278,3 +278,14 @@ Fri 21 Apr 2023 11:38:08 PM UTC:
  tests:  14|5
 total_score: 15/70
 32f4a4f
+Fri 21 Apr 2023 11:39:19 PM UTC: 
+ treemap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+treemap.c: In function ‘insertTreeMap’:
+treemap.c:63:33: error: ‘TreeMap’ has no member named ‘urrent’; did you mean ‘current’?
+   63 |        tree -> current = tree ->urrent->right -> right;
+      |                                 ^~~~~~
+      |                                 current
+Compilation failed
+e1435da
