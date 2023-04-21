@@ -50,7 +50,7 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
      TreeNode *nodonuevo =createTreeNode(key,value);
      tree -> root = nodonuevo;
      tree -> current = tree -> root;
-     printf("AAAAAAAAAAAAAAAAAA");
+     
      return;
    }
    if(searchTreeMap(tree,key)!= NULL) return;
@@ -59,9 +59,10 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
      newnode -> parent = tree ->current;
      if(tree->lower_than(tree -> current ->pair ->key,key) ==1){
        tree ->current->right -> right= newnode;
-       newnode -> parent = tree ->current;
+       newnode -> parent = tree ->current -> right;
        tree -> current = tree -> current -> right;
      }else{ 
+      newnode -> parent = tree ->current -> left;
       tree -> current ->left ->left = newnode;
       tree -> current = tree -> current -> left;
      }
