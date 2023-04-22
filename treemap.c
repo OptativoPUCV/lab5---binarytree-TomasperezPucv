@@ -238,7 +238,7 @@ Pair * upperBound(TreeMap * tree, void* key) {
       if(is_equal(tree, Ub_node-> key,key )) return Ub_node;
     }
   }*/
-  return NULL;
+  return Ub_node -> pair;
 }
 
 Pair * firstTreeMap(TreeMap * tree) {
