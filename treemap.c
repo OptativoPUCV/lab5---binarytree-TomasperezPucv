@@ -196,17 +196,9 @@ Pair * firstTreeMap(TreeMap * tree) {
 
 Pair * nextTreeMap(TreeMap * tree) {
   TreeNode *next = tree -> current;
-  if(next ->right != NULL){
-    while(next -> left !=NULL){
-      if(next ->left == NULL){
-       tree -> current = next;
-       return next-> pair; 
-      }
-      next = next ->left;
-    }
-   
-  }else{
-    
+  if(tree -> current -> right != NULL){
+    next = minimum(tree -> current -> right);
+    return next -> pair;
   }
     return NULL;
 }
