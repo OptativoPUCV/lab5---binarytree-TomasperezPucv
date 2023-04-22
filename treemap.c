@@ -200,7 +200,7 @@ Pair * nextTreeMap(TreeMap * tree) {
   }else{
     //caso 2
     while((tree -> current -> parent!= NULL)){
-      if((tree ->lower_than(tree -> current ->parent -> pair -> key,tree -> current -> pair -> key)==0)){
+      if((tree ->lower_than(tree -> current ->parent -> pair -> key,tree -> current -> pair -> key))){
 
         tree -> current = tree -> current -> parent;
   
@@ -212,10 +212,10 @@ Pair * nextTreeMap(TreeMap * tree) {
 
     return  tree -> current -> pair;
   }
+}
 
 
-
-    return NULL;
+    
   
     
     
@@ -236,5 +236,5 @@ Pair * nextTreeMap(TreeMap * tree) {
  
   
     
-}
+
     
