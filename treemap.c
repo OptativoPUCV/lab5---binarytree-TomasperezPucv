@@ -199,7 +199,13 @@ Pair * nextTreeMap(TreeMap * tree) {
     return next -> pair;
   }else{
     //caso 2
-    while((tree -> current -> parent!= NULL)||(tree ->lower_than(tree -> current ->parent -> pair -> key,tree -> current ->parent -> pair -> key)==0)){
+    while((tree -> current -> parent!= NULL)){
+      if((tree ->lower_than(tree -> current ->parent -> pair -> key,tree -> current ->parent -> pair -> key)==0)){
+
+        tree -> current = tree -> current -> parent;
+        next = tree -> current;
+        return  next -> pair;
+      }
       tree -> current = tree -> current -> parent;
       next = tree -> current;
     }
