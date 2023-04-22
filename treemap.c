@@ -196,6 +196,7 @@ Pair * nextTreeMap(TreeMap * tree) {
   //caso 1
   if(tree -> current -> right != NULL){
     next = minimum(tree -> current -> right);
+    tree -> current = next;
     return next -> pair;
   }else{
     //caso 2
@@ -212,6 +213,7 @@ Pair * nextTreeMap(TreeMap * tree) {
 
     return  tree -> current -> pair;
   }
+  return NULL;
 }
 
 
