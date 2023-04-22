@@ -1049,3 +1049,21 @@ Sat 22 Apr 2023 11:16:58 PM UTC:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 1b97c15
+Sat 22 Apr 2023 11:17:25 PM UTC: 
+ treemap.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:4:
+treemap.c: In function ‘upperBound’:
+treemap.c:206:34: error: expected ‘)’ before ‘return’
+  206 |   if(is_equal(tree, key, x-> key) return x;
+      |     ~                            ^~~~~~~
+      |                                  )
+treemap.c:225:1: error: expected expression before ‘}’ token
+  225 | }
+      | ^
+treemap.c:225:1: error: control reaches end of non-void function [-Werror=return-type]
+  225 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+ddd1722
