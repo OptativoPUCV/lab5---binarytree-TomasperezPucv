@@ -200,7 +200,7 @@ Pair * nextTreeMap(TreeMap * tree) {
     next = minimum(tree -> current -> right);
     return next -> pair;
   }else{
-    while(next -> parent != NULL){
+    while(next  != NULL){
     
     if((tree ->lower_than(tree -> current -> pair -> key,next -> parent -> pair -> key))==0){
       return next  ->pair;
