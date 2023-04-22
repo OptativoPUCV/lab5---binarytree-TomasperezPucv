@@ -129,7 +129,7 @@ void removeNode(TreeMap * tree, TreeNode* node) {
         aux = tree -> current;
         //buscar el mas cercano
         
-        TreeNode *cambio=aux;
+        TreeNode *cambio=aux ->left;
         while(cambio!=NULL){
           if(cambio ->right == NULL) break;
           cambio= cambio->right;
