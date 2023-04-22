@@ -203,7 +203,7 @@ Pair * upperBound(TreeMap * tree, void* key) {
   
   
   Pair *x = searchTreeMap(tree,key);
-  if(x !=NULL) return x;
+  if(is_equal(tree, x-> key, key)) return x;
   else{
     
     while(tree -> current != NULL){
