@@ -126,9 +126,9 @@ void removeNode(TreeMap * tree, TreeNode* node) {
         
       //caso 3(con 2 hijos)
       if((tree -> current -> left != NULL)&&(tree -> current -> right != NULL)){
-        /*aux = minimum(tree -> current -> right);
+        aux = minimum(tree -> current -> right);
         tree -> current -> pair = aux -> pair;
-        removeNode(tree, aux);*/
+        removeNode(tree, aux);
         
         //buscar el mas cercano
         
@@ -205,11 +205,9 @@ Pair * nextTreeMap(TreeMap * tree) {
     return next -> pair;
   }else{
     //caso 2
-    TreeNode *aux = tree -> root;
-    while(aux!=NULL){
-      aux= aux->left;
-    }
-    tree -> current = aux;
+    
+    
+  }
 
 
 
@@ -219,7 +217,7 @@ Pair * nextTreeMap(TreeMap * tree) {
     
     
     
-   /* next = next -> parent;
+   /*next = next -> parent;
     while(next  != NULL){
       next = next -> parent;
       if((tree ->lower_than(tree -> current -> pair -> key,tree -> current -> parent -> pair -> key))==0){
@@ -228,9 +226,7 @@ Pair * nextTreeMap(TreeMap * tree) {
       }
     
     
-    }
-    
-  }*/
+    } */
   
   
  
