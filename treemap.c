@@ -179,7 +179,7 @@ Pair * upperBound(TreeMap * tree, void* key) {
     while(tree -> current != NULL){
       
       x= nextTreeMap(tree);
-      if(is_equal(tree, key, x-> key)) return x;
+      if(is_equal(tree, x-> key,key )) return x;
     }
   }
   return NULL;
