@@ -176,7 +176,7 @@ Pair * upperBound(TreeMap * tree, void* key) {
   if(x !=NULL) return x;
   else{
     //tree -> current = tree -> root;
-    if(tree -> lower_than(tree -> current -> pair -> key, key)) return tree -> current -> pair; 
+    if(tree -> lower_than(tree -> current -> pair -> key, key)==1) return tree -> current -> pair; 
     /*while(tree -> current != NULL){
       
       x= nextTreeMap(tree);
