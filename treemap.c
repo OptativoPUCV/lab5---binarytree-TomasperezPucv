@@ -205,7 +205,8 @@ Pair * nextTreeMap(TreeMap * tree) {
     if((tree ->lower_than(next -> parent -> pair -> key,tree -> current -> pair -> key))==0){
       return next -> parent ->pair;
     }
-    next = next -> parent;
+    else next = next -> parent;
+    
   }
     return NULL;
 }
