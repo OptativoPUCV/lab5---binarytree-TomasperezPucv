@@ -196,11 +196,11 @@ Pair * nextTreeMap(TreeMap * tree) {
   //caso 1
   if(tree -> current -> right != NULL){
     next = minimum(tree -> current -> right);
+    tree -> current = next;
     return next -> pair;
   }else{
     //caso 2
-    next = minimum(tree -> current -> right);
-    tree -> current = next;
+    
     while((tree -> current -> parent!= NULL)){
       if((tree ->lower_than(tree -> current -> pair -> key,tree -> current ->parent -> pair -> key))){
 
@@ -212,9 +212,9 @@ Pair * nextTreeMap(TreeMap * tree) {
       
     }
 
-    return  tree -> current -> pair;
+    return NULL;
   }
-  return NULL;
+  
 }
 
 
