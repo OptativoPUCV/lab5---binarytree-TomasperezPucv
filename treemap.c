@@ -127,10 +127,7 @@ void removeNode(TreeMap * tree, TreeNode* node) {
       //caso 3(con 2 hijos)
       if((tree -> current -> left != NULL)&&(tree -> current -> right != NULL)){
         aux = tree -> current;
-        TreeNode *abajo = tree -> current -> right;
-        aux -> pair = aux -> left -> pair;
-        aux -> left = NULL;
-        aux -> right = abajo;
+        
         
       }
     }
@@ -177,6 +174,7 @@ Pair * upperBound(TreeMap * tree, void* key) {
   tree -> current = tree ->root;
   Pair *x = searchTreeMap(tree,key);
   if(x !=NULL) return x;
+  
   return NULL;
 }
 
@@ -187,6 +185,10 @@ Pair * firstTreeMap(TreeMap * tree) {
 }
 
 Pair * nextTreeMap(TreeMap * tree) {
-  
+  TreeNode *next = tree -> current;
+  if(next ->right != NULL){
+    next = minimum(next);
+    return next->pair;
+  }
     return NULL;
 }
