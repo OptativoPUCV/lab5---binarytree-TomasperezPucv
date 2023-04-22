@@ -178,7 +178,7 @@ Pair * upperBound(TreeMap * tree, void* key) {
   Pair *x = searchTreeMap(tree,key);
   while((tree ->lower_than(aux-> pair ->key, key))== 0){
     
-    if((tree ->lower_than(aux-> pair ->key, key))== 0){
+    if((tree ->lower_than(aux-> pair ->key, key))== 1){
       //
       aux  = aux ->left;
     }else{
