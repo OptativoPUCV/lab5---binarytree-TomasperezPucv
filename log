@@ -920,3 +920,20 @@ Sat 22 Apr 2023 10:24:32 PM UTC:
  1 file changed, 2 insertions(+), 2 deletions(-)
  tests:  0|0
 03f0c89
+Sat 22 Apr 2023 10:27:42 PM UTC: 
+ treemap.c | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+In file included from test.c:4:
+treemap.c: In function ‘upperBound’:
+treemap.c:188:58: error: comparison between pointer and integer [-Werror]
+  188 |       if (tree -> lower_than (key, Ub_node -> pair -> key==1)){
+      |                                                          ^~
+treemap.c:188:58: error: passing argument 2 of ‘tree->lower_than’ makes pointer from integer without a cast [-Werror=int-conversion]
+  188 |       if (tree -> lower_than (key, Ub_node -> pair -> key==1)){
+      |                                    ~~~~~~~~~~~~~~~~~~~~~~^~~
+      |                                                          |
+      |                                                          int
+treemap.c:188:58: note: expected ‘void *’ but argument is of type ‘int’
+cc1: all warnings being treated as errors
+Compilation failed
+ee9a4ed
