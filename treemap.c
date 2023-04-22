@@ -180,13 +180,8 @@ Pair * upperBound(TreeMap * tree, void* key) {
     
     if(tree -> lower_than(key, tree -> current -> pair -> key)) return tree -> current -> pair;
     else{
-      while (tree -> current != NULL){
-        if(tree -> lower_than(key, tree -> current -> pair -> key)){
-          x =nextTreeMap(tree);
-        }else return tree -> current -> pair;
-        
-      }
       
+      return nextTreeMap(tree);
     }
     
   }
