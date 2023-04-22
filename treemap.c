@@ -185,7 +185,7 @@ Pair * upperBound(TreeMap * tree, void* key) {
       Ub_node =tree -> current -> right;
       tree -> current = Ub_node;
     }else{
-      if (tree -> lower_than (key, Ub_node -> pair -> key==1)){
+      if (tree -> lower_than (key, Ub_node -> pair -> key)==1){
         Ub_node = tree -> current ->left;
         tree -> current = Ub_node;
         
