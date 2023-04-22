@@ -201,7 +201,7 @@ Pair * nextTreeMap(TreeMap * tree) {
     return next -> pair;
   }
   while(next -> parent != NULL){
-    if((tree ->lower_than(next -> parent,next ))==0){
+    if((tree ->lower_than(next -> parent,next ))==1){
       return next -> parent ->pair;
     }
     next = next -> parent;
