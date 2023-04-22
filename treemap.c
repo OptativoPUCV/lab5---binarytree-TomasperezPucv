@@ -199,11 +199,8 @@ Pair * nextTreeMap(TreeMap * tree) {
   if(tree -> current -> right != NULL){
     next = minimum(tree -> current -> right);
     return next -> pair;
-  }
-  
-  
-  //next = next -> parent;
-  while(next -> parent != NULL){
+  }else{
+    while(next -> parent != NULL){
     
     if((tree ->lower_than(tree -> current -> pair -> key,next -> parent -> pair -> key))==1){
       return next -> parent ->pair;
@@ -211,5 +208,10 @@ Pair * nextTreeMap(TreeMap * tree) {
     else next = next -> parent;
     
   }
+  }
+  
+  
+  //next = next -> parent;
+  
     return NULL;
 }
