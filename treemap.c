@@ -199,28 +199,22 @@ Pair * firstTreeMap(TreeMap * tree) {
 
 Pair * nextTreeMap(TreeMap * tree) {
   TreeNode *next = tree -> current;
+  //caso 1
   if(tree -> current -> right != NULL){
     next = minimum(tree -> current -> right);
     return next -> pair;
   }else{
-    /*while(next  != NULL){
+    //caso
+    while(next  != NULL){
       next = next -> parent;
-      if((tree ->lower_than(tree -> current -> pair -> key,next -> parent -> pair -> key))==0){
+      if((tree ->lower_than(tree -> current -> pair -> key,tree -> current -> parent -> pair -> key))==0){
         return next  ->pair;
       
       }
     
     
-    }*/
-    TreeNode * parent = tree->current->parent;
-        while (parent != NULL && tree->current == parent->right) {
-            tree->current = parent;
-            parent = parent->parent;
-        }
-        tree->current = parent;
-        if (parent != NULL) {
-            return parent -> pair;
-        } else return NULL;
+    }
+    
   }
   
   
@@ -228,3 +222,4 @@ Pair * nextTreeMap(TreeMap * tree) {
   
     return NULL;
 }
+    
