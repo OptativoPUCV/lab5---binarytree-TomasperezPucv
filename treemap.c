@@ -207,10 +207,10 @@ Pair * nextTreeMap(TreeMap * tree) {
         return  tree -> current -> pair;
       }
       tree -> current = tree -> current -> parent;
-      next = tree -> current;
+      
     }
 
-    return  next -> pair;
+    return  tree -> current -> pair;
   }
 
 
