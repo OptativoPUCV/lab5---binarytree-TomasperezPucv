@@ -199,24 +199,21 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
       x= nextTreeMap(tree);
       
     }*/
+
+
+
+
+
 Pair * upperBound(TreeMap * tree, void* key) {
-  
-  
-  
-  
-  
-  
-  
-  
-  
   
   Pair *x = searchTreeMap(tree,key);
   if(x !=NULL) return x;
   else{
     
     while(tree -> current != NULL){
-      if(tree -> lower_than(tree -> current -> pair -> key, key)) return tree -> current -> pair;
       if(is_equal(tree, x-> key,key ))return tree -> current -> pair;
+      if(tree -> lower_than(tree -> current -> pair -> key, key)) ;
+      
       x= nextTreeMap(tree);
       
     } 
