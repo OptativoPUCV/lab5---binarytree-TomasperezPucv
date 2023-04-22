@@ -126,6 +126,13 @@ void removeNode(TreeMap * tree, TreeNode* node) {
         
       //caso 3(con 2 hijos)
       if((tree -> current -> left != NULL)&&(tree -> current -> right != NULL)){
+        aux = tree -> current;
+        TreeNode *abajo = tree -> current -> right;
+        abajo -> parent = aux -> left;
+        abajo -> parent -> parent = aux -> parent;
+        abajo -> parent -> parent -> left = abajo -> parent;
+        abajo -> parent -> left = abajo;
+        
         
       }
     }
