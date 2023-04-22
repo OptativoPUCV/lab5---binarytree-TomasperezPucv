@@ -203,10 +203,11 @@ Pair * upperBound(TreeMap * tree, void* key) {
   
   
   Pair *x = searchTreeMap(tree,key);
-  if(key == x->key) return x;
+  
+  if(is_equal(tree, tree -> current -> pair -> key, key)) return x;
   else{
     
-    /*while(tree -> current != NULL){
+    while(tree -> current != NULL){
       if(tree -> lower_than(tree -> current -> pair -> key, key)) return tree -> current -> pair;
       x= nextTreeMap(tree);
     }
@@ -219,7 +220,7 @@ Pair * upperBound(TreeMap * tree, void* key) {
       
       x= nextTreeMap(tree);
       if(is_equal(tree, x-> key,key )) return x;
-    }*/
+    }
   }
   return NULL;
 }
