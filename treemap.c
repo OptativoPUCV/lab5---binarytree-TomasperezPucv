@@ -211,7 +211,7 @@ Pair * nextTreeMap(TreeMap * tree) {
 
 
 
-    
+    return NULL;
   }
     
     
@@ -231,6 +231,6 @@ Pair * nextTreeMap(TreeMap * tree) {
   
  
   
-    return NULL;
+    
 }
     
