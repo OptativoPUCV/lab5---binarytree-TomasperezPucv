@@ -207,5 +207,5 @@ Pair * nextTreeMap(TreeMap * tree) {
     }
     next = next -> parent;
   }
-    return NULL;
+ 
 }
