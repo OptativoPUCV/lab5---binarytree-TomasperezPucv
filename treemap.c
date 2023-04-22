@@ -128,9 +128,14 @@ void removeNode(TreeMap * tree, TreeNode* node) {
       if((tree -> current -> left != NULL)&&(tree -> current -> right != NULL)){
         aux = tree -> current;
         //buscar el mas cercano
-        TreeNode *cambio= minimum(aux);
+        
+        TreeNode *cambio=aux;
+        while(cambio!=NULL){
+          if(cambio ->right == NULL) break;
+          cambio= cambio->right;
+        }
         aux -> pair = cambio -> pair;
-        cambio -> parent-> left = NULL;
+        cambio -> parent-> right = NULL;
         
         
         
