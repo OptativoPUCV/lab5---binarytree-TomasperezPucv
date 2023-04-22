@@ -184,7 +184,12 @@ Pair * upperBound(TreeMap * tree, void* key) {
   tree -> current = tree ->root;
   Pair *x = searchTreeMap(tree,key);
   if(x !=NULL) return x;
-  
+  else{
+    while(tree -> current != NULL){
+      x= nextTreeMap(tree);
+      if(x !=NULL) return x;
+    }
+  }
   return NULL;
 }
 
@@ -203,11 +208,12 @@ Pair * nextTreeMap(TreeMap * tree) {
     while(next  != NULL){
       next = next -> parent;
       if((tree ->lower_than(tree -> current -> pair -> key,next -> parent -> pair -> key))==0){
-      return next  ->pair;
+        return next  ->pair;
+      
+      }
+    
+    
     }
-    
-    
-  }
   }
   
   
