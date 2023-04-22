@@ -200,6 +200,8 @@ Pair * nextTreeMap(TreeMap * tree) {
     return next -> pair;
   }else{
     //caso 2
+    next = minimum(tree -> current -> right);
+    tree -> current = next;
     while((tree -> current -> parent!= NULL)){
       if((tree ->lower_than(tree -> current -> pair -> key,tree -> current ->parent -> pair -> key))){
 
