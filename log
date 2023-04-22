@@ -953,3 +953,20 @@ Sat 22 Apr 2023 10:32:43 PM UTC:
  tests:  26|1
 total_score: 60/70
 bcb264d
+Sat 22 Apr 2023 10:39:19 PM UTC: 
+ treemap.c | 23 ++++++++++++++++++++---
+ 1 file changed, 20 insertions(+), 3 deletions(-)
+In file included from test.c:4:
+treemap.c:241:3: error: expected identifier or ‘(’ before ‘return’
+  241 |   return NULL;
+      |   ^~~~~~
+treemap.c:242:1: error: expected identifier or ‘(’ before ‘}’ token
+  242 | }
+      | ^
+treemap.c: In function ‘upperBound’:
+treemap.c:240:3: error: control reaches end of non-void function [-Werror=return-type]
+  240 |   }
+      |   ^
+cc1: all warnings being treated as errors
+Compilation failed
+0a3e982
