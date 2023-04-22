@@ -130,7 +130,7 @@ void removeNode(TreeMap * tree, TreeNode* node) {
         TreeNode *abajo = tree -> current -> right;
         abajo -> parent = aux -> left;
         abajo -> parent -> parent = aux -> parent;
-        abajo -> parent -> parent -> left = abajo -> parent;
+        
         abajo -> parent -> left = abajo;
         
         
