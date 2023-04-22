@@ -127,6 +127,11 @@ void removeNode(TreeMap * tree, TreeNode* node) {
       //caso 3(con 2 hijos)
       if((tree -> current -> left != NULL)&&(tree -> current -> right != NULL)){
         aux = tree -> current;
+        //buscar el mas cercano
+        TreeNode *cambio= minimum(aux);
+        aux -> pair = cambio -> pair;
+        cambio -> parent-> left = NULL;
+        
         
         
       }
